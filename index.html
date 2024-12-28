@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Animated Wallpaper</title>
+    <style>
+        body {
+            background-image: url("bg.png");
+            background-size: cover;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            margin: 0;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #1A1A1A;
+            overflow: hidden;
+        }
+
+        .container {
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: space-around;
+            width: 100%;
+            height: 100%;
+        }
+
+        #text {
+            position: absolute;
+            font-size: 500px;  
+            color: rgba(0, 120, 212, 0.1);  
+            z-index: 1;  
+            user-select: none;
+            pointer-events: none;
+            }
+
+
+        @keyframes bounce {
+            0% {
+                transform: scale(0.75);
+            }
+            75% {
+                transform: scale(1.50);
+            }
+        }
+
+        #avatar {
+            position: relative;
+            z-index: 10;
+            animation: drum 1s infinite, colorRotate 4s linear infinite;
+        }
+
+        @keyframes drum {
+            0%, 100% {
+                transform: scale(1);
+            }
+            50% {
+                transform: scale(1.05);
+            }
+        }
+
+        @keyframes colorRotate {
+            0% {
+                border-color: #0078D4; /* Azul */
+            }
+            25% {
+                border-color: #10C469; /* Verde */
+            }
+            50% {
+                border-color: #FF5B5B; /* Rojo */
+            }
+            75% {
+                border-color: #FFD700; /* Dorado */
+            }
+            100% {
+                border-color: #0078D4; /* Vuelve al azul */
+            }
+        }
+
+        #avatar img {
+            width: 400px;  
+            height: 400px;
+            border-radius: 50%;
+            border: 12px solid #0078D4;
+            object-fit: cover;
+            box-shadow: 0 0 30px rgba(0, 120, 212, 0.5);
+            transition: colorRotate 1s linear infinite;
+        }
+
+
+        #data {
+            position: relative; 
+            background: rgba(0, 120, 212, 0.2);
+            border-radius: 15px;
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            backdrop-filter: blur(10px);
+        }
+
+        #time {
+            font-size: 5rem;
+            color: #0078D4;
+            font-weight: bold;
+            display: flex; /* Flex para animar cada número por separado */
+        }
+
+        #time span {
+            display: inline-block; /* Permitir que cada número se anime de forma independiente */
+            animation: float 2s infinite; /* Animación de flotación */
+        }
+
+        @keyframes float {
+            0%, 100% {
+                transform: translateY(0);
+            }
+            50% {
+                transform: translateY(-10px); /* Subir y bajar */
+            }
+        }
+
+        #date {
+            font-size: 1.5rem;
+            color: #3A96DD;
+        }
+    </style>
+</head>
+<body>
+
+    <audio id="background-music" autoplay loop>
+        <source src="Music.opus" type="audio/webm">
+        Tu navegador no soporta la etiqueta de audio.
+    </audio>
+
+    <div class="container">
+        <div id="text">9</div>
+        
+        <div id="avatar">
+            <img id="drum-beat" src="avatar.png" alt="Avatar"  style="display: none;">
+        </div>
+
+        <div id="data">
+            <div id="time">
+                <span id="hours">00</span>:<span id="minutes">00</span>
+            </div>
+            <div id="date">00/00/0000</div>
+        </div>
+    </div>
+
+    <script>
+        function updateTime() {
+            const now = new Date();
+            const hours = String(now.getHours()).padStart(2, '0');
+            const minutes = String(now.getMinutes()).padStart(2, '0');
+            const day = String(now.getDate()).padStart(2, '0');
+            const month = String(now.getMonth() + 1).padStart(2, '0');
+            const year = String(now.getFullYear()).padStart(4, '0');
+            document.getElementById('hours').textContent = hours;
+            document.getElementById('minutes').textContent = minutes;
+            document.getElementById('date').textContent = `${day}/${month}/${year}`;
+        }
+
+    const audio = document.getElementById('background-music');
+    const drumImage = document.getElementById('drum-beat');
+
+    audio.addEventListener('playing', () => {
+        drumImage.style.display = 'block'; // Muestra la imagen cuando la música está reproduciendo
+        animateDrum();
+    });
+
+    function animateDrum() {
+        if (!audio.paused) {
+            drumImage.style.transform =
+            drumImage.style.transform = 'scale(1.1)'; // Ejemplo de animación
+            setTimeout(() => {
+                drumImage.style.transform = 'scale(1)';
+            }, 750); 
+        }
+        requestAnimationFrame(animateDrum); // Llama a la función nuevamente
+    }
+
+        setInterval(updateTime, 1000);
+        updateTime();
+
+      </script>
+</body>
+</html>
