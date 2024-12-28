@@ -1,21 +1,30 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Animated Wallpaper</title>
     <style>
+        :root {
+            --fluent-color: rgb(255, 105, 180);
+            --fluent-blur: blur(24px);
+            --fluent-shadow: 0 6px 10px rgba(0, 0, 0, 0.12), 0 2px 4px rgba(0, 0, 0, 0.08);
+            --fluent-transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+            --fluent-easing-standard: cubic-bezier(0.4, 0, 0.2, 1);
+            --fluent-easing-emphasize: cubic-bezier(0.2, 0, 0, 1);
+        }
+
         body {
-            background-image: url("bg.png");
-            background-size: cover;
             display: flex;
             align-items: center;
             justify-content: center;
             height: 100vh;
             margin: 0;
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            background-color: #1A1A1A;
+            background: linear-gradient(135deg, #1A1A1A, #2A2A2A);
             overflow: hidden;
+            font-size: 16px;
         }
 
         .container {
@@ -27,20 +36,72 @@
             height: 100%;
         }
 
-        #text {
-            position: absolute;
-            font-size: 500px;  
-            color: rgba(0, 120, 212, 0.1);  
-            z-index: 1;  
-            user-select: none;
-            pointer-events: none;
+        .loader {
+            border: 4px solid transparent;
+            border-top: 4px solid var(--fluent-color);
+            border-radius: 50%;
+            width: 120px;
+            height: 120px;
+            animation: fluent-spin 1.5s var(--fluent-easing-emphasize) infinite;
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            margin: auto;
+            z-index: 9999;
+            box-shadow: var(--fluent-shadow);
+            backdrop-filter: var(--fluent-blur);
+            background-color: rgba(255, 255, 255, 0.1);
+            will-change: transform;
+        }
+
+        @keyframes fluent-spin {
+            0% {
+                transform: rotate(0deg) scale(0.8);
+                opacity: 0.7;
             }
 
+            50% {
+                transform: rotate(180deg) scale(1.2);
+                opacity: 1;
+            }
+
+            100% {
+                transform: rotate(360deg) scale(0.8);
+                opacity: 0.7;
+            }
+        }
+
+        #foreground {
+            position: absolute;
+            bottom: -5%;
+            font-size: 500px;
+            color: rgba(0, 120, 212, 0.1);
+            z-index: -9;
+            width: 100vh;
+            aspect-ratio: 4 / 3;
+            object-fit: cover;
+            user-select: none;
+            pointer-events: none;
+        }
+
+        #background {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -10;
+            transform: translateZ(-1px) scale(2);
+            filter: blur(5px);
+        }
 
         @keyframes bounce {
             0% {
                 transform: scale(0.75);
             }
+
             75% {
                 transform: scale(1.50);
             }
@@ -53,9 +114,12 @@
         }
 
         @keyframes drum {
-            0%, 100% {
+
+            0%,
+            100% {
                 transform: scale(1);
             }
+
             50% {
                 transform: scale(1.05);
             }
@@ -63,36 +127,38 @@
 
         @keyframes colorRotate {
             0% {
-                border-color: #0078D4; /* Azul */
+                border-color: #0078D4;
             }
+
             25% {
-                border-color: #10C469; /* Verde */
+                border-color: #10C469;
             }
+
             50% {
-                border-color: #FF5B5B; /* Rojo */
+                border-color: #FF5B5B;
             }
+
             75% {
-                border-color: #FFD700; /* Dorado */
+                border-color: #FFD700;
             }
+
             100% {
-                border-color: #0078D4; /* Vuelve al azul */
+                border-color: #0078D4;
             }
         }
 
         #avatar img {
-            width: 400px;  
-            height: 400px;
-            border-radius: 50%;
-            border: 12px solid #0078D4;
+            width: 50vw;
+            max-width: 300px;
+            aspect-ratio: 4 / 4;
             object-fit: cover;
-            box-shadow: 0 0 30px rgba(0, 120, 212, 0.5);
-            transition: colorRotate 1s linear infinite;
+            border: 12px solid rgb(255, 105, 180);
+            box-shadow: 0 0 30px rgba(255, 105, 180, 0.5);
         }
 
-
         #data {
-            position: relative; 
-            background: rgba(0, 120, 212, 0.2);
+            position: relative;
+            background: rgba(255, 105, 180, 0.5);
             border-radius: 15px;
             padding: 20px;
             display: flex;
@@ -103,43 +169,142 @@
 
         #time {
             font-size: 5rem;
-            color: #0078D4;
+            color: rgb(116, 50, 83);
+            /* Cambiar el color del tiempo a rosa */
+
             font-weight: bold;
-            display: flex; /* Flex para animar cada número por separado */
+            display: flex;
         }
 
         #time span {
-            display: inline-block; /* Permitir que cada número se anime de forma independiente */
-            animation: float 2s infinite; /* Animación de flotación */
+            display: inline-block;
+            animation: float 2s infinite;
         }
 
         @keyframes float {
-            0%, 100% {
+
+            0%,
+            100% {
                 transform: translateY(0);
             }
+
             50% {
-                transform: translateY(-10px); /* Subir y bajar */
+                transform: translateY(-10px);
             }
         }
 
         #date {
             font-size: 1.5rem;
-            color: #3A96DD;
+            color: rgb(255, 237, 240);
+            /* Un tono más claro de rosa para la fecha */
+            padding: 10px;
+        }
+
+        #audio-controls {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background: rgba(255, 255, 255, 0.8);
+            border-radius: 10px;
+            padding: 10px;
+            box-shadow: var(--fluent-shadow);
+            backdrop-filter: var(--fluent-blur);
+            display: flex;
+            align-items: rigth;
+            justify-items: right;
+            transition: width 0.3s;
+            /* Transición para el ancho */
+            width: 150px;
+
+        }
+
+        #blur-background {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            backdrop-filter: var(--fluent-blur);
+            z-index: 9998;
+            /* Asegurarse de que esté detrás del botón */
+        }
+
+        #play-button-container {
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            z-index: 10000;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        #play-button {
+            background: var(--fluent-color);
+            border: none;
+            color: white;
+            padding: 15px 30px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 20px;
+            transition: background 0.3s;
+        }
+
+        #play-button:hover {
+            background: rgba(255, 105, 180, 0.8);
+        }
+
+        /* Animación para eliminar el botón */
+        @keyframes fadeOut {
+            0% {
+                opacity: 1;
+            }
+
+            100% {
+                opacity: 0;
+                transform: scale(1.2);
+            }
+        }
+
+        #audio-controls button:hover {
+            background: rgba(0, 65, 255, 0.8);
+        }
+
+        #audio-controls:hover {
+            width: 400px;
+            /* Ancho al pasar el cursor */
+        }
+
+        #audio-controls audio {
+            display: none;
+            /* Ocultar el audio inicialmente */
+        }
+
+        #audio-controls:hover audio {
+            display: block;
+            /* Mostrar el audio al pasar el cursor */
         }
     </style>
 </head>
+
 <body>
 
-    <audio id="background-music" autoplay loop>
-        <source src="Music.opus" type="audio/webm">
-        Tu navegador no soporta la etiqueta de audio.
-    </audio>
+    <img id="background" src="bg.png">
+
+    <div class="loader"></div>
+
+    <div id="blur-background"></div>
+
+    <div id="play-button-container" style="display: none;">
+        <p>Version 2 (yuyuko)</p>
+        <button id="play-button">Touch for play</button>
+    </div>
 
     <div class="container">
-        <div id="text">9</div>
-        
+        <img src="foreground.png" id="foreground">
+
         <div id="avatar">
-            <img id="drum-beat" src="avatar.png" alt="Avatar">
+            <img id="drum-beat" src="avatar.png" alt="Avatar" style="display: none;">
         </div>
 
         <div id="data">
@@ -150,7 +315,36 @@
         </div>
     </div>
 
+    <div id="audio-controls">
+        <audio id="background-music" preload="auto" controls loop>
+            <source src="music.ogg" type="audio/ogg">
+            Tu navegador no soporta la etiqueta de audio.
+        </audio>
+        <span>Yuyuko Theme</h2>
+    </div>
+
     <script>
+        const audio = document.getElementById('background-music');
+        const playButtonContainer = document.getElementById('play-button-container');
+        const container = document.querySelector('.container');
+        const audioControls = document.getElementById('audio-controls');
+
+        playButtonContainer.addEventListener('click', () => {
+            audio.play();
+            playButtonContainer.querySelector('#play-button').style.animation = 'fadeOut 0.5s forwards';
+            setTimeout(() => {
+                playButtonContainer.style.display = 'none';
+                container.style.display = 'flex';
+                audioControls.style.display = 'flex';
+                document.getElementById('blur-background').style.display = 'none'; // Ocultar el fondo desenfocado
+            }, 500);
+        });
+
+        window.onload = function () {
+            document.querySelector('.loader').style.display = 'none';
+            document.getElementById('play-button-container').style.display = 'flex';
+        };
+
         function updateTime() {
             const now = new Date();
             const hours = String(now.getHours()).padStart(2, '0');
@@ -163,28 +357,27 @@
             document.getElementById('date').textContent = `${day}/${month}/${year}`;
         }
 
-    const audio = document.getElementById('background-music');
-    const drumImage = document.getElementById('drum-beat');
+        const drumImage = document.getElementById('drum-beat');
 
-    audio.addEventListener('playing', () => {
-        drumImage.style.display = 'block'; // Muestra la imagen cuando la música está reproduciendo
-        animateDrum();
-    });
+        audio.addEventListener('playing', () => {
+            drumImage.style.display = 'block';
+            animateDrum();
+        });
 
-    function animateDrum() {
-        if (!audio.paused) {
-            drumImage.style.transform =
-            drumImage.style.transform = 'scale(1.1)'; // Ejemplo de animación
-            setTimeout(() => {
-                drumImage.style.transform = 'scale(1)';
-            }, 750); 
+        function animateDrum() {
+            if (!audio.paused) {
+                drumImage.style.transform = 'scale(1.1)';
+                setTimeout(() => {
+                    drumImage.style.transform = 'scale(1)';
+                }, 192);
+            }
+            requestAnimationFrame(animateDrum);
         }
-        requestAnimationFrame(animateDrum); // Llama a la función nuevamente
-    }
 
         setInterval(updateTime, 1000);
         updateTime();
+    </script>
 
-      </script>
 </body>
+
 </html>
