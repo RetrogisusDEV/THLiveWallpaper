@@ -11,7 +11,7 @@ Actualmente (2024), con la versión 2, se ha mejorado la interfaz base, sin puli
 - *Animaciones de movimiento* básicas
 - *Diseño responsive* para adaptarse a cualquier pantalla (sin terminar)
 
-### Contenido a futuro
+## Contenido a futuro
 
 Tengo varias ideas para implementar en el futuro, pero no tengo suficiente tiempo para traerlas tan rápido. Estas son las ideas y posiblemente traiga algunas rápidamente:
 
@@ -24,11 +24,11 @@ Tengo varias ideas para implementar en el futuro, pero no tengo suficiente tiemp
 - ❌ *Pantalla de inicio* mejor elaborada
 - ❌ *Mejores animaciones* tanto de la interfaz como en los personajes
 
-#### Contribuciones
+### Contribuciones
 
 Las contribuciones solo serán aceptadas si siguen el contexto de la temática de Touhou o mejoras en la interfaz y componentes.
 
-##### Modificaciones propias
+### Modificaciones propias
 
 Las versiones personalizadas o personales son aceptadas siempre y cuando se deje nombramiento de este proyecto y la URL del repositorio, respetando también el contenido protegido con `Derechos de autor`.
 
