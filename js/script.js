@@ -21,14 +21,27 @@ window.onload = function () {
 
 function updateTime() {
     const now = new Date();
-    const hours = String(now.getHours()).padStart(2, '0');
-    const minutes = String(now.getMinutes()).padStart(2, '0');
-    const day = String(now.getDate()).padStart(2, '0');
-    const month = String(now.getMonth() + 1).padStart(2, '0');
-    const year = String(now.getFullYear()).padStart(4, '0');
-    document.getElementById('hours').textContent = hours;
-    document.getElementById('minutes').textContent = minutes;
-    document.getElementById('date').textContent = `${day}/${month}/${year}`;
+    
+    // Formatear la hora
+    const timeFormatter = new Intl.DateTimeFormat('es', {
+        hour: '2-digit',
+        minute: '2-digit',
+        hour12: false
+    });
+    const formattedTime = timeFormatter.format(now);
+    
+    // Formatear la fecha
+    const dateFormatter = new Intl.DateTimeFormat('es', {
+        day: '2-digit',
+        month: '2-digit',
+        year: 'numeric'
+    });
+    const formattedDate = dateFormatter.format(now);
+    
+    // Actualizar el contenido en el DOM
+    document.getElementById('hours').textContent = formattedTime.split(':')[0];
+    document.getElementById('minutes').textContent = formattedTime.split(':')[1];
+    document.getElementById('date').textContent = formattedDate;
 }
 
 const drumImage = document.getElementById('drum-beat');
