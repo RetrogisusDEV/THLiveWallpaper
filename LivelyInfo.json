@@ -1,0 +1,15 @@
+{
+  "AppVersion": "2.0.0.0",
+  "Title": "Touhou Live Wallpaper",
+  "Thumbnail": "thumbnail.jpg",
+  "Preview": "preview.jpg",
+  "Desc": "RetrogisusDEV",
+  "Author": "rocksdanister",
+  "License": "See Note.txt",
+  "Contact": "https://github.com/RetrogisusDEV/THLiveBackground",
+  "Type": 1,
+  "FileName": "index.html",
+  "Arguments": "--pause-event true --system-nowplaying",
+  "Tags": ["Live Wallpaper", "Touhou", "RetrogisusDEV", "rocksdanister"],
+  "IsAbsolutePath": false
+}
