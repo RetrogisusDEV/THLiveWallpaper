@@ -1,0 +1,12 @@
+TLW by RetrogisusDEV The GPL3.0 License (GPL3)
+https://github.com/RetrogisusDEV/THLiveBackground
+
+Este projecto nace como algo para matar el rato, sin ninguna ambision futura
+pero que puede ser útil para algunos usuarios, incluso para crear sus propias versiones.
+
+la verdad es de los projectos que más terminados tengo LOL.
+
+Resources used :
+
+Border of Life : Composed by ZUN 
+https://open.spotify.com/intl-es/track/5xClUDCW2tuMWdNjM4XuHH
