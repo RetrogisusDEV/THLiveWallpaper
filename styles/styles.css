@@ -202,11 +202,13 @@ body {
     box-shadow: var(--fluent-shadow);
     backdrop-filter: var(--fluent-blur);
     display: flex;
-    align-items: rigth;
+    align-items: center;
+    flex-direction: row-reverse;
     justify-items: right;
     transition: width 0.3s;
     /* Transición para el ancho */
     width: 150px;
+    justify-content: space-around;
 
 }
 
