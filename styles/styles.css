@@ -7,13 +7,18 @@
     --fluent-easing-emphasize: cubic-bezier(0.2, 0, 0, 1);
 }
 
+html {
+    font-family: "Ubuntu", serif;
+    font-weight: 500;
+    font-style: normal;
+}
+
 body {
     display: flex;
     align-items: center;
     justify-content: center;
     height: 100vh;
     margin: 0;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     background: linear-gradient(135deg, #1A1A1A, #2A2A2A);
     overflow: hidden;
     font-size: 16px;
