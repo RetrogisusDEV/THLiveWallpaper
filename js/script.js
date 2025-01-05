@@ -2,6 +2,12 @@ const audio = document.getElementById('background-music');
 const playButtonContainer = document.getElementById('play-button-container');
 const container = document.querySelector('.container');
 const audioControls = document.getElementById('audio-controls');
+const loader = document.querySelector('.loader');
+const blurBackground = document.getElementById('blur-background');
+const hoursElement = document.getElementById('hours');
+const minutesElement = document.getElementById('minutes');
+const dateElement = document.getElementById('date');
+const drumImage = document.getElementById('drum-beat');
 
 playButtonContainer.addEventListener('click', () => {
     audio.play();
@@ -10,41 +16,33 @@ playButtonContainer.addEventListener('click', () => {
         playButtonContainer.style.display = 'none';
         container.style.display = 'flex';
         audioControls.style.display = 'flex';
-        document.getElementById('blur-background').style.display = 'none'; // Ocultar el fondo desenfocado
+        blurBackground.style.display = 'none';
     }, 500);
 });
 
 window.onload = function () {
-    document.querySelector('.loader').style.display = 'none';
-    document.getElementById('play-button-container').style.display = 'flex';
+    loader.style.display = 'none';
+    playButtonContainer.style.display = 'flex';
 };
 
 function updateTime() {
     const now = new Date();
-    
-    // Formatear la hora
     const timeFormatter = new Intl.DateTimeFormat('es', {
         hour: '2-digit',
         minute: '2-digit',
         hour12: false
     });
     const formattedTime = timeFormatter.format(now);
-    
-    // Formatear la fecha
     const dateFormatter = new Intl.DateTimeFormat('es', {
         day: '2-digit',
         month: '2-digit',
         year: 'numeric'
     });
     const formattedDate = dateFormatter.format(now);
-    
-    // Actualizar el contenido en el DOM
-    document.getElementById('hours').textContent = formattedTime.split(':')[0];
-    document.getElementById('minutes').textContent = formattedTime.split(':')[1];
-    document.getElementById('date').textContent = formattedDate;
+    hoursElement.textContent = formattedTime.split(':')[0];
+    minutesElement.textContent = formattedTime.split(':')[1];
+    dateElement.textContent = formattedDate;
 }
-
-const drumImage = document.getElementById('drum-beat');
 
 audio.addEventListener('playing', () => {
     drumImage.style.display = 'block';

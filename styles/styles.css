@@ -166,9 +166,7 @@ body {
 
 #time {
     font-size: 5rem;
-    color: rgb(116, 50, 83);
-    /* Cambiar el color del tiempo a rosa */
-
+    color: rgb(255, 105, 180);
     font-weight: bold;
     display: flex;
 }
@@ -193,7 +191,6 @@ body {
 #date {
     font-size: 1.5rem;
     color: rgb(255, 237, 240);
-    /* Un tono más claro de rosa para la fecha */
     padding: 10px;
 }
 
@@ -211,10 +208,8 @@ body {
     flex-direction: row-reverse;
     justify-items: right;
     transition: width 0.3s;
-    /* Transición para el ancho */
     width: 150px;
     justify-content: space-around;
-
 }
 
 #blur-background {
@@ -225,7 +220,6 @@ body {
     bottom: 0;
     backdrop-filter: var(--fluent-blur);
     z-index: 9998;
-    /* Asegurarse de que esté detrás del botón */
 }
 
 #play-button-container {
@@ -253,7 +247,6 @@ body {
     background: rgba(255, 105, 180, 0.8);
 }
 
-/* Animación para eliminar el botón */
 @keyframes fadeOut {
     0% {
         opacity: 1;
@@ -271,15 +264,12 @@ body {
 
 #audio-controls:hover {
     width: 400px;
-    /* Ancho al pasar el cursor */
 }
 
 #audio-controls audio {
     display: none;
-    /* Ocultar el audio inicialmente */
 }
 
 #audio-controls:hover audio {
     display: block;
-    /* Mostrar el audio al pasar el cursor */
 }
