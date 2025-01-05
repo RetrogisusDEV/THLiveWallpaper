@@ -1,10 +1,32 @@
 :root {
-    --fluent-color: rgb(255, 105, 180);
+    --fluent-primary: rgb(255, 105, 180);
+    --fluent-primary-text: rgb(255, 255, 255);
+    --fluent-secondary-text: rgb(200, 200, 200);
+    --fluent-background: rgb(32, 32, 32);
+    --fluent-surface: rgb(40, 40, 40);
+    --fluent-border: rgba(255, 255, 255, 0.1);
+    --fluent-overlay: rgba(0, 0, 0, 0.6);
+    --fluent-overlay-button: var(--fluent-primary);
+    --fluent-overlay-audio: rgb(50, 50, 50);
+    --fluent-overlay-audio-text: rgb(255, 255, 255);
     --fluent-blur: blur(24px);
     --fluent-shadow: 0 6px 10px rgba(0, 0, 0, 0.12), 0 2px 4px rgba(0, 0, 0, 0.08);
+    --fluent-glow: 0 0 8px rgba(255, 105, 180, 0.4);
     --fluent-transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
     --fluent-easing-standard: cubic-bezier(0.4, 0, 0.2, 1);
     --fluent-easing-emphasize: cubic-bezier(0.2, 0, 0, 1);
+    --fluent-color: var(--fluent-primary);
+    --fluent-background-gradient: linear-gradient(135deg, #1A1A1A, #2A2A2A);
+    --fluent-avatar-border: 12px solid var(--fluent-primary);
+    --fluent-avatar-shadow: 0 0 30px rgba(255, 105, 180, 0.5);
+    --fluent-data-background: rgba(255, 105, 180, 0.5);
+    --fluent-time-color: var(--fluent-primary-text);
+    --fluent-date-color: rgb(255, 237, 240);
+    --fluent-audio-controls-background: rgba(10, 10, 10, 0.8);
+    --fluent-audio-controls-text: rgba(255, 219, 249);
+    --fluent-play-button-background: var(--fluent-primary);
+    --fluent-play-button-hover: rgba(255, 105, 180, 0.8);
+    --fluent-audio-controls-hover-background: rgba(0, 65, 255, 0.8);
 }
 
 html {
@@ -19,7 +41,7 @@ body {
     justify-content: center;
     height: 100vh;
     margin: 0;
-    background: linear-gradient(135deg, #1A1A1A, #2A2A2A);
+    background: var(--fluent-background-gradient);
     overflow: hidden;
     font-size: 16px;
 }
@@ -124,7 +146,7 @@ body {
 
 @keyframes colorRotate {
     0% {
-        border-color: #0078D4;
+        border-color: var(--fluent-primary);
     }
 
     25% {
@@ -140,7 +162,7 @@ body {
     }
 
     100% {
-        border-color: #0078D4;
+        border-color: var(--fluent-primary);
     }
 }
 
@@ -149,13 +171,13 @@ body {
     max-width: 300px;
     aspect-ratio: 4 / 4;
     object-fit: cover;
-    border: 12px solid rgb(255, 105, 180);
-    box-shadow: 0 0 30px rgba(255, 105, 180, 0.5);
+    border: var(--fluent-avatar-border);
+    box-shadow: var(--fluent-avatar-shadow);
 }
 
 #data {
     position: relative;
-    background: rgba(255, 105, 180, 0.5);
+    background: var(--fluent-data-background);
     border-radius: 15px;
     padding: 20px;
     display: flex;
@@ -166,7 +188,7 @@ body {
 
 #time {
     font-size: 5rem;
-    color: rgb(255, 105, 180);
+    color: var(--fluent-time-color);
     font-weight: bold;
     display: flex;
 }
@@ -190,7 +212,7 @@ body {
 
 #date {
     font-size: 1.5rem;
-    color: rgb(255, 237, 240);
+    color: var(--fluent-date-color);
     padding: 10px;
 }
 
@@ -198,7 +220,7 @@ body {
     position: fixed;
     bottom: 20px;
     right: 20px;
-    background: rgba(255, 255, 255, 0.8);
+    background: var(--fluent-audio-controls-background);
     border-radius: 10px;
     padding: 10px;
     box-shadow: var(--fluent-shadow);
@@ -233,7 +255,7 @@ body {
 }
 
 #play-button {
-    background: var(--fluent-color);
+    background: var(--fluent-play-button-background);
     border: none;
     color: white;
     padding: 15px 30px;
@@ -244,7 +266,7 @@ body {
 }
 
 #play-button:hover {
-    background: rgba(255, 105, 180, 0.8);
+    background: var(--fluent-play-button-hover);
 }
 
 @keyframes fadeOut {
@@ -258,8 +280,13 @@ body {
     }
 }
 
+#audio-controls{
+    background: var(--fluent-audio-controls-background);
+    color: var(--fluent-audio-controls-text);
+}
+
 #audio-controls button:hover {
-    background: rgba(0, 65, 255, 0.8);
+    background: var(--fluent-audio-controls-hover-background);
 }
 
 #audio-controls:hover {
@@ -267,6 +294,7 @@ body {
 }
 
 #audio-controls audio {
+    color: var(--fluent-audio-controls-text);
     display: none;
 }
 
