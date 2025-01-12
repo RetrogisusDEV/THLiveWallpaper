@@ -25,7 +25,10 @@
     <div id="blur-background"></div>
     <div id="play-button-container" style="display: none;">
         <p><b style="color:white">Version 2.1 (yuyuko)</b></p>
-        <button id="play-button" aria-label="Play Button" role="button" tabindex="0"><b>Touch to Play</b></button>
+        <button id="play-button" aria-label="Play Button" role="button" tabindex="0"><b>Launch Wallpaper</b></button>
+        <pre id="changelog">
+            <code id="codeBlock"></code>
+        </pre>
     </div>
     <div class="container" style="display: none;">
         <img src="media/foreground.png" id="foreground" alt="Foreground Image" loading="lazy">
@@ -46,6 +49,7 @@
         </audio>
         <span><b>Yuyuko Theme</b></span>
     </div>
+    <script src="changelog.js" defer></script>
     <script src="js/showelement.js" defer></script>
     <script src="js/drumeffect.js" defer></script>
     <script src="js/time.js" defer></script>
