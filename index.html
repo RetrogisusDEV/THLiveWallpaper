@@ -12,14 +12,14 @@
     <meta name="keywords" content="animated, wallpaper, web">
 </head>
 <body>
-    <img id="background" src="media/background.png" alt="Background Image">
+    <img id="background" src="media/background.png" alt="Background Image" style="display: none;">
     <div class="loader"></div>
     <div id="blur-background"></div>
     <div id="play-button-container" style="display: none;">
         <p><b>Version 2.1 (yuyuko)</b></p>
         <button id="play-button"><b>Touch to Play</b></button>
     </div>
-    <div class="container">
+    <div class="container" style="display: none;">
         <img src="media/foreground.png" id="foreground" alt="Foreground Image">
         <div id="avatar">
             <img id="drum-beat" src="media/avatar.png" alt="Avatar" style="display: none;">
@@ -31,13 +31,14 @@
             <div id="date">00/00/0000</div>
         </div>
     </div>
-    <div id="audio-controls">
+    <div id="audio-controls" style="display: none;">
         <audio id="background-music" preload="auto" controls loop>
             <source src="music/yuyuko.ogg" type="audio/ogg">
             Your browser does not support the audio tag.
         </audio>
         <span><b>Yuyuko Theme</b></span>
     </div>
+    <script src="js/showelement.js" defer></script>
     <script src="js/drumeffect.js" defer></script>
     <script src="js/time.js" defer></script>
     <script src="js/script.js" defer></script>
