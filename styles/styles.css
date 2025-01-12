@@ -195,7 +195,7 @@ body {
 
 #time span {
     display: inline-block;
-    animation: float 2s infinite;
+    animation: float 8s infinite;
 }
 
 @keyframes float {
@@ -229,7 +229,7 @@ body {
     align-items: center;
     flex-direction: row-reverse;
     justify-items: right;
-    transition: width 0.3s;
+    transition: width 0.5s;
     width: 150px;
     justify-content: space-around;
 }
