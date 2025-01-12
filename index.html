@@ -1,28 +1,36 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="styles/styles.css">
+    <link rel="icon" type="image/png" href="media/avatar.png">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap" rel="stylesheet">
-    <title>Touhou Live Wallpaper</title>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap"
+        rel="stylesheet">
     <meta name="description" content="Animated Wallpaper">
     <meta name="keywords" content="animated, wallpaper, web">
+    <meta name="theme-color" content="#000000">
+    <meta name="msapplication-TileColor" content="#000000">
+    <meta name="msapplication-TileImage" content="media/avatar.png">
+    <title>Touhou Live Wallpaper</title>
 </head>
+
 <body>
     <img id="background" src="media/background.png" alt="Background Image" style="display: none;">
     <div class="loader"></div>
     <div id="blur-background"></div>
     <div id="play-button-container" style="display: none;">
-        <p><b>Version 2.1 (yuyuko)</b></p>
-        <button id="play-button"><b>Touch to Play</b></button>
+        <p><b style="color:white">Version 2.1 (yuyuko)</b></p>
+        <button id="play-button" aria-label="Play Button" role="button" tabindex="0"><b>Touch to Play</b></button>
     </div>
     <div class="container" style="display: none;">
-        <img src="media/foreground.png" id="foreground" alt="Foreground Image">
+        <img src="media/foreground.png" id="foreground" alt="Foreground Image" loading="lazy">
         <div id="avatar">
-            <img id="drum-beat" src="media/avatar.png" alt="Avatar" style="display: none;">
+            <img id="drum-beat" src="media/avatar.png" alt="Avatar" style="display: none;" loading="lazy">
         </div>
         <div id="data">
             <div id="time">
@@ -42,5 +50,7 @@
     <script src="js/drumeffect.js" defer></script>
     <script src="js/time.js" defer></script>
     <script src="js/script.js" defer></script>
+    <noscript>Your browser does not support JavaScript!</noscript>
 </body>
+
 </html>
