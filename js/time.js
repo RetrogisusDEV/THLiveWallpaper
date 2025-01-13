@@ -11,8 +11,8 @@ function updateTime() {
         month: '2-digit',
         year: 'numeric'
     });
-    hoursElement.textContent = hours.padStart(2, '0');
-    minutesElement.textContent = minutes.padStart(2, '0');
+    hoursElement.textContent = hours
+    minutesElement.textContent = minutes
     dateElement.textContent = dateFormatter.format(now);
 }
 
