@@ -18,6 +18,9 @@ playButtonContainer.addEventListener('click', () => {
     container.style.display = 'flex';
     audioControls.style.display = 'flex';
     blurBackground.style.display = 'none';
+    document.getElementById('background').style.display = 'block';
+    document.getElementById('drum-beat').style.display = 'flex';
+    document.getElementById('changelog').style.display = 'none';
   }, 500);
 });
 
