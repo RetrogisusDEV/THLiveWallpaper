@@ -1,5 +1,10 @@
 # Touhou Live Wallpaper
 
+[![Latest release](https://img.shields.io/github/v/release/RetrogisusDEB/THLiveWallpaper?include_prereleases)](https://github.com/RetrogisusDEB/THLiveWallpaper/releases)
+[![License](https://img.shields.io/github/license/RetrogisusDEB/THLiveWallpaper)](https://www.gnu.org/licenses/gpl-3.0)
+[![Downloads](https://img.shields.io/github/downloads/RetrogisusDEB/THLiveWallpaper/total)](https://github.com/RetrogisusDEB/THLiveWallpaper/releases)
+
+
 ![Version](https://img.shields.io/badge/TLW-2.0-green) ![Version Web](https://img.shields.io/badge/TLWWeb-2.1-green) ![WE](https://img.shields.io/badge/WallpaperEngine-Yes-blue) ![Lovely](https://img.shields.io/badge/LovelyWallpaper-Yes-blue) ![Personajes Totales](https://img.shields.io/badge/Toronjas-1-red) ![Workshop](https://img.shields.io/badge/Workshop-No-red)
 
 Link preview : [Touhou Live Wallpaper Web Version](https://retrogisusdev.github.io/THLiveWallpaper/)
