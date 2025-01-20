@@ -85,6 +85,7 @@ body {
     margin: auto;
     z-index: 9999;
     box-shadow: var(--fluent-shadow);
+    -webkit-backdrop-filter: var(--fluent-blur);
     backdrop-filter: var(--fluent-blur);
     background-color: rgba(255, 255, 255, 0.1);
     will-change: transform;
@@ -217,6 +218,7 @@ pre {
     display: flex;
     flex-direction: column;
     align-items: center;
+    -webkit-backdrop-filter: var(--fluent-blur);
     backdrop-filter: blur(10px);
 }
 
@@ -258,6 +260,7 @@ pre {
     border-radius: 10px;
     padding: 10px;
     box-shadow: var(--fluent-shadow);
+    -webkit-backdrop-filter: var(--fluent-blur);
     backdrop-filter: var(--fluent-blur);
     display: flex;
     align-items: center;
@@ -274,6 +277,7 @@ pre {
     left: 0;
     right: 0;
     bottom: 0;
+    -webkit-backdrop-filter: var(--fluent-blur);
     backdrop-filter: var(--fluent-blur);
     z-index: 9998;
 }
