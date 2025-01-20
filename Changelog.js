@@ -16,4 +16,4 @@ Dev : Ya es lost Mrd
 
 const codeBlock = document.getElementById('codeBlock');
 
-codeBlock.textContent = codeText;
+codeBlock.innerText = codeText;
