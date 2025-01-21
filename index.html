@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="styles/normalize.css">
     <link rel="stylesheet" href="styles/styles.css">
-    <link rel="icon" type="image/png" href="variants/media/avatar.png">
+    <link rel="icon" type="image/jpg" href="icon.jpg">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap" rel="stylesheet">
@@ -13,11 +13,11 @@
     <meta name="keywords" content="animated, wallpaper, web">
     <meta name="theme-color" content="#000000">
     <meta name="msapplication-TileColor" content="#000000">
-    <meta name="msapplication-TileImage" content="variants/media/avatar.png">
+    <meta name="msapplication-TileImage" content="icon.jpg">
     <title>Touhou Live Wallpaper</title>
 </head>
 <body>
-    <img id="background" src="variants/media/background.png" alt="Background Image" style="display: none;">
+    <img id="background" src="media/background.png" alt="Background Image" style="display: none;">
     <div class="loader"></div>
     <div id="blur-background"></div>
     <div id="play-button-container" style="display: none;">
@@ -34,9 +34,9 @@
         </div>
     </div>
     <div class="container" style="display: none;">
-        <img src="variants/media/foreground.png" id="foreground" alt="Foreground Image" loading="lazy">
+        <img src="media/foreground.png" id="foreground" alt="Foreground Image" loading="lazy">
         <div id="avatar">
-            <img id="drum-beat" src="variants/media/avatar.png" alt="Avatar" style="display: none;" loading="lazy">
+            <img id="drum-beat" src="media/avatar.png" alt="Avatar" style="display: none;" loading="lazy">
         </div>
         <div id="data">
             <div id="time">
@@ -47,14 +47,14 @@
     </div>
     <div id="audio-controls" style="display: none;">
         <audio id="background-music" preload="auto" controls loop>
-            <source src="variants/music/yuyuko.ogg" type="audio/ogg">
+            <source src="music/yuyuko.ogg" type="audio/ogg">
             Your browser does not support the audio tag.
         </audio>
         <span><b>Yuyuko Theme</b></span>
     </div>
     <script src="changelog.js" defer></script>
     <script src="js/drumeffect.js" defer></script>
-    <script src="js/script.js" defer></script>
     <script src="js/time.js" defer></script>
+    <script src="js/script.js" defer></script>
 </body>
 </html>
