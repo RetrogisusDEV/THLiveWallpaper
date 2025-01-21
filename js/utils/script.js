@@ -4,9 +4,6 @@ const container = document.querySelector('.container');
 const audioControls = document.getElementById('audio-controls');
 const loader = document.querySelector('.loader');
 const blurBackground = document.getElementById('blur-background');
-const hoursElement = document.getElementById('hours');
-const minutesElement = document.getElementById('minutes');
-const dateElement = document.getElementById('date');
 const drumImage = document.getElementById('drum-beat');
 
 playButtonContainer.addEventListener('click', () => {

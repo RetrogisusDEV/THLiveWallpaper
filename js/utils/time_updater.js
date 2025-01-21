@@ -1,3 +1,7 @@
+const hoursElement = document.getElementById('hours');
+const minutesElement = document.getElementById('minutes');
+const dateElement = document.getElementById('date');
+
 function updateTime() {
     const now = new Date();
     const timeFormatter = new Intl.DateTimeFormat('es', {
