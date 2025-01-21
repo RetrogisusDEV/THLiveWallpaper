@@ -17,7 +17,7 @@
     <title>Touhou Live Wallpaper</title>
 </head>
 <body>
-    <img id="background" src="media/background.png" alt="Background Image" style="display: none;">
+    <img id="background" src="media/background.png" alt="Background Image" style="display: none;" loading="eager" aria-placeholder="Background Image">
     <div class="loader"></div>
     <div id="blur-background"></div>
     <div id="play-button-container" style="display: none;">
@@ -34,9 +34,9 @@
         </div>
     </div>
     <div class="container" style="display: none;">
-        <img src="media/foreground.png" id="foreground" alt="Foreground Image" loading="lazy">
+        <img src="media/foreground.png" id="foreground" alt="Foreground Image" loading="eager" aria-placeholder="Foreground Image">
         <div id="avatar">
-            <img id="drum-beat" src="media/avatar.png" alt="Avatar" style="display: none;" loading="lazy">
+            <img id="drum-beat" src="media/avatar.png" alt="Avatar" style="display: none;" loading="eager" aria-placeholder="Avatar">
         </div>
         <div id="data">
             <div id="time">
@@ -52,9 +52,10 @@
         </audio>
         <span><b>Yuyuko Theme</b></span>
     </div>
+    <script src="js/navdetector.js" defer></script>
     <script src="changelog.js" defer></script>
     <script src="js/drumeffect.js" defer></script>
-    <script src="js/time.js" defer></script>
     <script src="js/script.js" defer></script>
+    <script src="js/time.js" defer></script>
 </body>
 </html>
