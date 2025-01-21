@@ -23,14 +23,14 @@ A partir de la versión 2.1 (2025), se han realizado importantes cambios en la t
 
 Tengo varias ideas para implementar en el futuro, pero no tengo suficiente tiempo para traerlas tan rápido. Estas son las ideas y posiblemente traiga algunas rápidamente:
 
-- (X) Diseños chibi de personajes en formato SVG para mejor calidad-resolución
-- ~~UI/UX mejor pulida y optimizada para dispositivos móviles~~
-- (X) Fondo con efecto parallax y algunos efectos independientes
-- (X) Interacciones y SFX
-- (X) Menú de personalización
-- (X) Personalizaciones internas
-- (casi) Pantalla de inicio mejor elaborada
-- (X) Mejores animaciones tanto de la interfaz como en los personajes
+- [ ] Diseños chibi de personajes en formato SVG para mejor calidad-resolución
+- [x] UI/UX mejor pulida y optimizada para dispositivos móviles
+- [ ] Fondo con efecto parallax y algunos efectos independientes
+- [ ] Interacciones y SFX
+- [ ] Menú de personalización
+- [ ] Personalizaciones internas
+- [x] Pantalla de inicio mejor elaborada
+- [x] Mejores animaciones tanto de la interfaz como en los personajes
 
 ## Contribuciones
 
