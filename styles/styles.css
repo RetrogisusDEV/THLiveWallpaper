@@ -14,7 +14,6 @@
     --fluent-glow: 0 0 8px rgba(255, 105, 180, 0.4);
     --fluent-transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
     --fluent-easing-standard: cubic-bezier(0.4, 0, 0.2, 1);
-    --fluent-easing-emphasize: cubic-bezier(0.2, 0, 0, 1);
     --fluent-color: var(--fluent-primary);
     --fluent-background-gradient: linear-gradient(135deg, #1A1A1A, #2A2A2A);
     --fluent-avatar-border: 12px solid var(--fluent-primary);
@@ -97,7 +96,7 @@ body {
     }
 
     50% {
-        transform: rotate(180deg) scale(1.2);
+        transform: rotate(180deg) scale(1.1); /* Reduced scale to minimize layout shift */
         opacity: 1;
     }
 
@@ -167,7 +166,6 @@ pre {
 }
 
 @keyframes drum {
-
     0%,
     100% {
         transform: scale(1);
@@ -233,7 +231,6 @@ pre {
 }
 
 @keyframes float {
-
     0%,
     100% {
         transform: translateY(0);
@@ -264,7 +261,7 @@ pre {
     align-items: center;
     flex-direction: row-reverse;
     justify-items: right;
-    transition: width 0.5s;
+    transition: transform 0.5s;
     width: 150px;
     justify-content: space-around;
 }
@@ -316,7 +313,7 @@ pre {
     }
 }
 
-#audio-controls{
+#audio-controls {
     background: var(--fluent-audio-controls-background);
     color: var(--fluent-audio-controls-text);
 }
@@ -326,7 +323,7 @@ pre {
 }
 
 #audio-controls:hover {
-    width: 400px;
+    transform: scale(1.5);
 }
 
 #audio-controls audio {
@@ -359,10 +356,6 @@ pre {
     #avatar img {
         width: 70vw;
     }
-
-    #audio-controls {
-        width: 120px;
-    }
 }
 
 @media (max-width: 480px) {
@@ -385,9 +378,5 @@ pre {
 
     #avatar img {
         width: 90vw;
-    }
-
-    #audio-controls {
-        width: 100px;
     }
 }
