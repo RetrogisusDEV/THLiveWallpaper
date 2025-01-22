@@ -356,6 +356,10 @@ pre {
     #avatar img {
         width: 70vw;
     }
+
+    #audio-controls {
+        width: 120px;
+    }
 }
 
 @media (max-width: 480px) {
@@ -378,5 +382,9 @@ pre {
 
     #avatar img {
         width: 90vw;
+    }
+
+    #audio-controls {
+        width: 100px;
     }
 }
