@@ -6,6 +6,8 @@
 
 ![WE](https://img.shields.io/badge/Wallpaper_Engine-Yes-blue) ![Lovely](https://img.shields.io/badge/Lovely_Wallpaper-Yes-blue) ![Personajes Totales](https://img.shields.io/badge/Toronjas-1-red) ![Workshop](https://img.shields.io/badge/Steam_Workshop-No-red)
 
+![Touhou Live Wallpaper](icon.webp) 
+
 Link preview : [Touhou Live Wallpaper Web Version](https://retrogisusdev.github.io/THLiveWallpaper/)
 
 Un fondo dinámico web con diseño inspirado en el diseño Fluent de Microsoft, que puede ser utilizado con programas como Wallpaper Engine o similares, usando HTML, CSS y JavaScript.

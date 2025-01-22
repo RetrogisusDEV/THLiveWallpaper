@@ -1,7 +1,7 @@
 {
-  "AppVersion": "2.0.0.0",
+  "AppVersion": "2.2.0.0",
   "Title": "Touhou Live Wallpaper",
-  "Thumbnail": "thumbnail.jpg",
+  "Thumbnail": "preview.jpg",
   "Preview": "preview.jpg",
   "Desc": "Un fondo dinámico web sobre Touhou Project con diseño inspirado en el diseño Fluent de Microsoft",
   "Author": "RetrogisusDEV",
