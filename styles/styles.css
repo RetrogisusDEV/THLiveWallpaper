@@ -323,7 +323,8 @@ pre {
 }
 
 #audio-controls:hover {
-    transform: scale(1.5);
+    width: 400px;
+    transition: width 0.3s;
 }
 
 #audio-controls audio {
@@ -360,6 +361,10 @@ pre {
     #audio-controls {
         width: 120px;
     }
+
+    #audio-controls:hover {
+        width: 350px;
+    }
 }
 
 @media (max-width: 480px) {
@@ -386,5 +391,9 @@ pre {
 
     #audio-controls {
         width: 100px;
+    }
+
+    #audio-controls:hover {
+        width: 300px;
     }
 }
