@@ -337,3 +337,57 @@ pre {
 #audio-controls:hover audio {
     display: block;
 }
+
+@media (max-width: 768px) {
+    body {
+        font-size: 14px;
+    }
+
+    #play-button {
+        padding: 10px 20px;
+        font-size: 16px;
+    }
+
+    #time {
+        font-size: 3rem;
+    }
+
+    #date {
+        font-size: 1.2rem;
+    }
+
+    #avatar img {
+        width: 70vw;
+    }
+
+    #audio-controls {
+        width: 120px;
+    }
+}
+
+@media (max-width: 480px) {
+    body {
+        font-size: 12px;
+    }
+
+    #play-button {
+        padding: 8px 16px;
+        font-size: 14px;
+    }
+
+    #time {
+        font-size: 2rem;
+    }
+
+    #date {
+        font-size: 1rem;
+    }
+
+    #avatar img {
+        width: 90vw;
+    }
+
+    #audio-controls {
+        width: 100px;
+    }
+}
