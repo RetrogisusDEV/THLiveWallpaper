@@ -1,4 +1,11 @@
-# Touhou Live Wallpaper
+###
+
+<h1 align="center">Touhou Live Wallpaper</h1>
+
+###
+
+<div align="center">
+  
   [![Latest release](https://img.shields.io/github/v/release/RetrogisusDEV/THLiveWallpaper?include_prereleases)](https://github.com/RetrogisusDEV/THLiveWallpaper/releases)
   [![License](https://img.shields.io/github/license/RetrogisusDEV/THLiveWallpaper)](https://www.gnu.org/licenses/gpl-3.0)
   [![Downloads](https://img.shields.io/github/downloads/RetrogisusDEV/THLiveWallpaper/total)](https://github.com/RetrogisusDEV/THLiveWallpaper/releases)
@@ -18,6 +25,8 @@
   ![Workshop](https://img.shields.io/badge/Steam_Workshop-No-red)
 
 ![Touhou Live Wallpaper](icon.webp) 
+
+</div>
 
 Link preview : [Touhou Live Wallpaper Web Version](https://retrogisusdev.github.io/THLiveWallpaper/)
 
