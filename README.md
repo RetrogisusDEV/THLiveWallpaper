@@ -1,12 +1,32 @@
-# Touhou Live Wallpaper
+###
 
-[![Latest release](https://img.shields.io/github/v/release/RetrogisusDEV/THLiveWallpaper?include_prereleases)](https://github.com/RetrogisusDEV/THLiveWallpaper/releases)
-[![License](https://img.shields.io/github/license/RetrogisusDEV/THLiveWallpaper)](https://www.gnu.org/licenses/gpl-3.0)
-[![Downloads](https://img.shields.io/github/downloads/RetrogisusDEV/THLiveWallpaper/total)](https://github.com/RetrogisusDEV/THLiveWallpaper/releases)
+<h1 align="center">Touhou Live Wallpaper</h1>
 
-![WE](https://img.shields.io/badge/Wallpaper_Engine-Yes-blue) ![Lovely](https://img.shields.io/badge/Lovely_Wallpaper-Yes-blue) ![Personajes Totales](https://img.shields.io/badge/Toronjas-1-red) ![Workshop](https://img.shields.io/badge/Steam_Workshop-No-red)
+###
+
+<div align="center">
+  
+  [![Latest release](https://img.shields.io/github/v/release/RetrogisusDEV/THLiveWallpaper?include_prereleases)](https://github.com/RetrogisusDEV/THLiveWallpaper/releases)
+  [![License](https://img.shields.io/github/license/RetrogisusDEV/THLiveWallpaper)](https://www.gnu.org/licenses/gpl-3.0)
+  [![Downloads](https://img.shields.io/github/downloads/RetrogisusDEV/THLiveWallpaper/total)](https://github.com/RetrogisusDEV/THLiveWallpaper/releases)
+
+  ![Edge](https://img.shields.io/badge/Edge-0078D7?style=for-the-badge&logo=Microsoft-edge&logoColor=white)
+  ![Firefox](https://img.shields.io/badge/Firefox-FF7139?style=for-the-badge&logo=Firefox-Browser&logoColor=white)
+  ![Brave](https://img.shields.io/badge/Brave-FB542B?style=for-the-badge&logo=Brave&logoColor=white)
+  ![Google Chrome](https://img.shields.io/badge/Google%20Chrome-4285F4?style=for-the-badge&logo=GoogleChrome&logoColor=white)
+
+  ![Visual Studio Code](https://img.shields.io/badge/Visual%20Studio%20Code-0078d7.svg?style=for-the-badge&logo=visual-studio-code&logoColor=white)
+  ![HTML5](https://img.shields.io/badge/html5-%23E34F26.svg?style=for-the-badge&logo=html5&logoColor=white)
+  ![JavaScript](https://img.shields.io/badge/javascript-%23323330.svg?style=for-the-badge&logo=javascript&logoColor=%23F7DF1E)
+  ![CSS3](https://img.shields.io/badge/css3-%231572B6.svg?style=for-the-badge&logo=css3&logoColor=white)
+
+  ![WE](https://img.shields.io/badge/Wallpaper_Engine-Yes-blue) 
+  ![Lovely](https://img.shields.io/badge/Lovely_Wallpaper-Yes-blue) 
+  ![Workshop](https://img.shields.io/badge/Steam_Workshop-No-red)
 
 ![Touhou Live Wallpaper](icon.webp) 
+
+</div>
 
 Link preview : [Touhou Live Wallpaper Web Version](https://retrogisusdev.github.io/THLiveWallpaper/)
 
