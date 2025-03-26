@@ -8,7 +8,7 @@
     <link rel="icon" type="image/svg+xml" href="svgs/icon.svg" sizes="196x196">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;400;500;700&display=swap" rel="stylesheet">
     <meta name="description" content="Animated Wallpaper">
     <meta name="keywords" content="animated, wallpaper, web">
     <meta name="theme-color" content="#000000">
@@ -17,12 +17,17 @@
     <title>Touhou Live Wallpaper</title>
 </head>
 <body>
-    <img src="media/yuyuko/background.jpg" id="background" alt="Background Image" style="display: none;" loading="eager" aria-placeholder="Background Image">
-    <div class="loader"></div>
+    <img src="media/yuyuko/background.jpg" id="background" alt="Background Image" loading="eager" style="display: none;">
+    
+    <div class="loader" aria-live="polite"></div>
+    
     <div id="blur-background"></div>
+    
     <div id="play-button-container" style="display: none;">
-        <p><b style="color:white">Version 2.2 (yuyuko)</b></p>
-        <button id="play-button" aria-label="Play Button" role="button" tabindex="0"><b>Launch Wallpaper Preview</b></button>
+        <p><strong style="color:white">Version 2.2 (yuyuko)</strong></p>
+        <button id="play-button" aria-label="Play Button" role="button" tabindex="0">
+            <strong>Launch Wallpaper Preview</strong>
+        </button>
         <pre id="changelog">
             <code id="codeBlock"></code>
         </pre>
@@ -33,10 +38,11 @@
             <a href="https://github.com/RetrogisusDEV/THLiveWallpaper" style="margin-left: 12px;" target="_blank" rel="noopener noreferrer">Touhou Live Wallpaper Source Code</a>
         </div>
     </div>
+    
     <div class="container" style="display: none;">
-        <img src="media/yuyuko/foreground.svg" id="foreground" alt="Foreground Image" loading="eager" aria-placeholder="Foreground Image">
+        <img src="media/yuyuko/foreground.svg" id="foreground" alt="Foreground Image" loading="eager">
         <div id="avatar">
-            <img id="drum-beat" src="media/yuyuko/avatar.png" alt="Avatar" style="display: none;" loading="eager" aria-placeholder="Avatar">
+            <img id="drum-beat" src="media/yuyuko/avatar.png" alt="Avatar" loading="eager" style="display: none;">
         </div>
         <div id="data">
             <div id="time">
@@ -45,13 +51,15 @@
             <div id="date">00/00/0000</div>
         </div>
     </div>
+    
     <div id="audio-controls" style="display: none;">
         <audio id="background-music" preload="auto" controls loop>
             <source src="music/yuyuko.ogg" type="audio/ogg">
-            Your browser does not support the audio tag.
+            Tu navegador no soporta la etiqueta de audio.
         </audio>
-        <span><b>Yuyuko Theme</b></span>
+        <span><strong>Yuyuko Theme</strong></span>
     </div>
+    
     <script src="js/utils/navegator_detector.js" defer></script>
     <script src="changelog.js" defer></script>
     <script src="js/anim/drum_animation.js" defer></script>
