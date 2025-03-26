@@ -2,21 +2,24 @@
     --fluent-primary: rgb(255, 105, 180);
     --fluent-primary-text: rgb(255, 255, 255);
     --fluent-secondary-text: rgb(200, 200, 200);
+
     --fluent-background: rgb(32, 32, 32);
     --fluent-surface: rgb(40, 40, 40);
+    --fluent-background-gradient: linear-gradient(135deg, #1A1A1A, #2A2A2A);
+
     --fluent-border: rgba(255, 255, 255, 0.1);
+    --fluent-blur: blur(24px);
+    --fluent-shadow: 0 6px 10px rgba(0, 0, 0, 0.12), 0 2px 4px rgba(0, 0, 0, 0.08);
+    --fluent-glow: 0 0 8px rgba(255, 105, 180, 0.4);
+    --fluent-avatar-border: 12px solid var(--fluent-primary);
+
+    --fluent-transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    --fluent-easing-standard: cubic-bezier(0.4, 0, 0.2, 1);
+
     --fluent-overlay: rgba(0, 0, 0, 0.6);
     --fluent-overlay-button: var(--fluent-primary);
     --fluent-overlay-audio: rgb(50, 50, 50);
     --fluent-overlay-audio-text: rgb(255, 255, 255);
-    --fluent-blur: blur(24px);
-    --fluent-shadow: 0 6px 10px rgba(0, 0, 0, 0.12), 0 2px 4px rgba(0, 0, 0, 0.08);
-    --fluent-glow: 0 0 8px rgba(255, 105, 180, 0.4);
-    --fluent-transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-    --fluent-easing-standard: cubic-bezier(0.4, 0, 0.2, 1);
-    --fluent-color: var(--fluent-primary);
-    --fluent-background-gradient: linear-gradient(135deg, #1A1A1A, #2A2A2A);
-    --fluent-avatar-border: 12px solid var(--fluent-primary);
     --fluent-data-background: rgba(255, 105, 180, 0.5);
     --fluent-time-color: var(--fluent-primary-text);
     --fluent-date-color: rgb(255, 237, 240);
@@ -44,37 +47,78 @@ body {
     font-size: 16px;
 }
 
-.container {
-    position: relative;
-    display: flex;
-    align-items: center;
-    justify-content: space-around;
-    width: 100%;
-    height: 100%;
-}
-
+.container,
 .container-contact {
-    background-color: var(--fluent-background);
-    border-radius: 10px;
-    box-shadow: var(--fluent-shadow);
-    color: var(--fluent-primary-text);
-    font-family: "Ubuntu", serif;
-    position: relative;
     display: flex;
     align-items: center;
     justify-content: center;
     width: 100%;
     height: 100%;
+}
+
+.container {
+    position: relative;
+    justify-content: space-around;
+}
+
+.container-contact {
+    position: relative;
+    background-color: var(--fluent-background);
+    border-radius: 10px;
+    box-shadow: var(--fluent-shadow);
+    color: var(--fluent-primary-text);
     padding: 10px;
+}
+
+pre, #data, #audio-controls {
+    background-color: var(--fluent-background);
+    border-radius: 10px;
+    box-shadow: var(--fluent-shadow);
+    color: var(--fluent-primary-text);
+    padding: 1em;
+}
+
+pre {
+    border-left: 3px solid var(--fluent-primary);
+    font-size: 15px;
+    line-height: 1.6;
+    margin-bottom: 1.6em;
+}
+
+#data {
+    background: var(--fluent-data-background);
+    padding: 20px;
+    flex-direction: column;
+    -webkit-backdrop-filter: blur(10px);
+    backdrop-filter: blur(10px);
+}
+
+#audio-controls {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    display: flex;
+    align-items: center;
+    flex-direction: row-reverse;
+    justify-content: space-around;
+    width: 150px;
+    transition: var(--fluent-transition);
+    background: var(--fluent-audio-controls-background);
+    color: var(--fluent-audio-controls-text );
+    border-radius: 10px;
+    padding: 10px;
+    box-shadow: var(--fluent-shadow);
+    -webkit-backdrop-filter: var(--fluent-blur);
+    backdrop-filter: var(--fluent-blur);
 }
 
 .loader {
     border: 4px solid transparent;
-    border-top: 4px solid var(--fluent-color);
+    border-top-color: var(--fluent-color);
     border-radius: 50%;
     width: 120px;
     height: 120px;
-    animation: fluent-spin 1.5s var(--fluent-easing-emphasize) infinite;
+    animation: fluent-spin 1.5s var(--fluent-easing-standard) infinite;
     position: fixed;
     top: 0;
     left: 0;
@@ -94,34 +138,14 @@ body {
         transform: rotate(0deg) scale(0.8);
         opacity: 0.7;
     }
-
     50% {
-        transform: rotate(180deg) scale(1.1); /* Reduced scale to minimize layout shift */
+        transform: rotate(180deg) scale(1.1);
         opacity: 1;
     }
-
     100% {
         transform: rotate(360deg) scale(0.8);
         opacity: 0.7;
     }
-}
-
-pre {
-    background-color: var(--fluent-background);
-    border-left: 3px solid var(--fluent-primary);
-    border-radius: 10px;
-    box-shadow: var(--fluent-shadow);
-    color: var(--fluent-primary-text);
-    page-break-inside: avoid;
-    font-family: "Ubuntu", serif;
-    font-size: 15px;
-    line-height: 1.6;
-    margin-bottom: 1.6em;
-    max-width: 100%;
-    overflow: auto;
-    padding: 1em 1.5em;
-    display: block;
-    word-wrap: break-word;
 }
 
 #foreground {
@@ -153,7 +177,6 @@ pre {
     0% {
         transform: scale(0.75);
     }
-
     75% {
         transform: scale(1.50);
     }
@@ -166,11 +189,9 @@ pre {
 }
 
 @keyframes drum {
-    0%,
-    100% {
+    0%, 100% {
         transform: scale(1);
     }
-
     50% {
         transform: scale(1.05);
     }
@@ -180,19 +201,15 @@ pre {
     0% {
         border-color: var(--fluent-primary);
     }
-
     25% {
         border-color: #10C469;
     }
-
     50% {
         border-color: #FF5B5B;
     }
-
     75% {
         border-color: #FFD700;
     }
-
     100% {
         border-color: var(--fluent-primary);
     }
@@ -203,19 +220,7 @@ pre {
     max-width: 300px;
     aspect-ratio: 4 / 4;
     object-fit: cover;
-    box-shadow: var(--fluent-avatar-shadow);
-}
-
-#data {
-    position: relative;
-    background: var(--fluent-data-background);
-    border-radius: 15px;
-    padding: 20px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    -webkit-backdrop-filter: var(--fluent-blur);
-    backdrop-filter: blur(10px);
+    box-shadow: var(--fluent-avatar-border);
 }
 
 #time {
@@ -231,11 +236,9 @@ pre {
 }
 
 @keyframes float {
-    0%,
-    100% {
+    0%, 100% {
         transform: translateY(0);
     }
-
     50% {
         transform: translateY(-10px);
     }
@@ -245,36 +248,6 @@ pre {
     font-size: 1.5rem;
     color: var(--fluent-date-color);
     padding: 10px;
-}
-
-#audio-controls {
-    position: fixed;
-    bottom: 20px;
-    right: 20px;
-    background: var(--fluent-audio-controls-background);
-    border-radius: 10px;
-    padding: 10px;
-    box-shadow: var(--fluent-shadow);
-    -webkit-backdrop-filter: var(--fluent-blur);
-    backdrop-filter: var(--fluent-blur);
-    display: flex;
-    align-items: center;
-    flex-direction: row-reverse;
-    justify-items: right;
-    transition: transform 0.5s;
-    width: 150px;
-    justify-content: space-around;
-}
-
-#blur-background {
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    -webkit-backdrop-filter: var(--fluent-blur);
-    backdrop-filter: var(--fluent-blur);
-    z-index: 9998;
 }
 
 #play-button-container {
@@ -306,16 +279,10 @@ pre {
     0% {
         opacity: 1;
     }
-
     100% {
         opacity: 0;
         transform: scale(1.2);
     }
-}
-
-#audio-controls {
-    background: var(--fluent-audio-controls-background);
-    color: var(--fluent-audio-controls-text);
 }
 
 #audio-controls button:hover {
